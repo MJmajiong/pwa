@@ -36,6 +36,16 @@
         <ul class="list" id="js-list"></ul>
         <a id="js-thanks" class="thanks" href="https://developers.douban.com/wiki/?title=guide">- 本Demo基于豆瓣API，感谢豆瓣开放平台 -</a>
     </main>
+    <script>
+    // 此处代码 后面相关章节会去说明
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js')
+                .then(function(registration) {})
+                .catch(function(err) {})
+            })
+        }
+    </script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
